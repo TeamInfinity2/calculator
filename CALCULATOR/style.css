@@ -1,0 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background: url('/images\ \(1\).jpg') no-repeat center center fixed; /* Add your image here */
+    background-size: cover; 
+    color: #16035b;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); 
+    z-index: -1;
+}
+
+.calculator {
+    width: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(110, 231, 221, 0.25);
+    position: relative;
+    z-index: 1;
+}
+
+.display {
+    width: 100%;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    text-align: right;
+    font-size: 2em;
+    line-height: 60px;
+    padding: 0 15px;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.button {
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    padding: 20px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.05);
+}
+
+.button.operator {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.button.equals {
+    background: #613ce4;
+    grid-column: span 2;
+}
